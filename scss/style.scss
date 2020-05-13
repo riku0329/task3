@@ -1,0 +1,7 @@
+@import "./variable/breakpoint";
+@import "./variable//color";
+
+body {
+  background: $base-color-2;
+  height: 30vh;
+}
