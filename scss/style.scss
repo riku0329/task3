@@ -1,7 +1,7 @@
-@import "./variable/breakpoint";
-@import "./variable//color";
+@import "./base/reset";
+@import "./base/base";
 
-body {
-  background: $base-color-2;
-  height: 30vh;
-}
+@import "./components/nav";
+@import "./layout/header";
+
+@import "color";

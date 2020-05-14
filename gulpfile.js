@@ -8,32 +8,35 @@ const sourcemaps = require('gulp-sourcemaps');
 
 const paths = {
   'src': {
-    'scss': 'scss/style.scss',
+    'scss': './scss/style.scss',
   },
   'dist': {
-    'css': './css/style.css',
+    'css': './css',
   }
 };
 
 gulp.task('sass', done => {
-  gulp.src(paths.src.scss)
+  gulp
+    .src('./scss/style.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'expanded',
-    }).on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-    }))
+    .pipe(
+      sass({
+        outputStyle: 'expanded',
+      }).on('error', sass.logError)
+    )
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dist.css))
     .pipe(cleanCSS())
-    .pipe(rename({
-      suffix: '.min',
-    }))
+    .pipe(
+      rename({
+        suffix: '.min',
+      })
+    )
     .pipe(gulp.dest(paths.dist.css));
   done();
 });
 
 gulp.task('dev', () => {
-  gulp.watch(paths.src.scss, gulp.task('sass'));
+  gulp.watch('./**/*.scss', gulp.task('sass'));
 });

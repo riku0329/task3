@@ -1,0 +1,42 @@
+@import '../color';
+
+.header {
+  background: linear-gradient(to right, $base-color-3, $base-color-4);
+  height: 71.5rem;
+  position: relative;
+  width: 100%;
+}
+
+.header_wrap {
+  margin: 0 auto;
+  max-width: 1070px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &-title {
+    color: $secondary-text;
+    font-size: 8.5rem;
+    z-index: 1;
+    letter-spacing: 1.7rem;
+    line-height: 120px;
+    padding-top: 12rem;
+    font-weight: bold;
+    span{
+      display: block;
+      margin: 0;
+    }
+  }
+  &-subtitle {
+    color: $secondary-text;
+    font-size: 2rem;
+    z-index: 1;
+  }
+  &-logo {
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    right: 50px;
+    max-width: 802px;
+    height: auto;
+  }
+}
