@@ -21,6 +21,9 @@
     width: 30px;
     margin: 0 20px;
   }
+  .about &-title::before, .about &-title::after {
+    border-top: 4px solid $secondary-text;
+  }
 
   &-description {
     text-align: center;

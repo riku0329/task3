@@ -1,0 +1,19 @@
+@import "../color";
+
+.about_wrap{
+  background: $linear-color;
+  &-color{
+    color: $secondary-text;
+  }
+}
+
+.about_content{
+  max-width: 800px;
+  width: 100%;
+  margin: 4rem auto 0;
+  display: flex;
+
+  &-image{
+    margin-right: 4rem;
+  }
+}

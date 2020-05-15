@@ -1,11 +1,10 @@
 @import '../color';
 
 .header {
-  background: linear-gradient(to right, $base-color-3, $base-color-4);
+  background: $linear-color;
   height: 93vh;
   position: relative;
   width: 100%;
-
 
   @include phone{
     height: 65vh;
