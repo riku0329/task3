@@ -57,11 +57,12 @@
   &-display {
     position: absolute;
     z-index: 1;
-    top: 10px;
+    top: 15px;
     right: 12.5px;
 
     @include tablet {
       @include abusolute-center;
+      top: 90px;
     }
   }
   &-banner {
