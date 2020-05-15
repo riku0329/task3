@@ -1,32 +1,43 @@
-@import "../color";
+@import '../color';
 
-.feature_wrap{
+.feature {
   background: $base-color-2;
 }
 
-.feature_content{
+.feature_wrap {
   display: flex;
   margin-top: 6rem;
   justify-content: space-evenly;
+  width: 100%;
+
+  @include tablet {
+    flex-direction: column;
+  }
 
   &-image {
     margin-right: 4rem;
     width: 100%;
     height: auto;
     max-width: 648px;
+    @include tablet {
+      @include responsive-content;
+    }
   }
 
-  &-description{
-    >div{
+  &-description {
+    > div {
       margin-top: 2rem;
+      @include tablet {
+        @include responsive-content;
+      }
     }
 
-    >div:first-child{
+    > div:first-child {
       margin-top: 0;
     }
-    a{
+    a {
       text-decoration: none;
-      color: #219BE8;
+      color: #219be8;
     }
   }
 }

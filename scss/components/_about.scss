@@ -1,13 +1,13 @@
 @import "../color";
 
-.about_wrap{
+.about{
   background: $linear-color;
-  &-color{
+  &_color{
     color: $secondary-text;
   }
 }
 
-.about_content{
+.about_wrap{
   max-width: 800px;
   width: 100%;
   margin: 4rem auto 0;
@@ -15,5 +15,18 @@
 
   &-image{
     margin-right: 4rem;
+  }
+}
+
+.about_profile{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  p{
+    text-align: center;
+    padding: 1rem;
+  }
+  @include tablet{
+    display: none;
   }
 }

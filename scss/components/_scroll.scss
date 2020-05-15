@@ -1,0 +1,18 @@
+@import '../color';
+
+.scroll_btn {
+  width: 100%;
+  height: 60px;
+  background: $linear-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p{
+    color: $secondary-text;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  p:hover{
+    opacity: 0.8;
+  }
+}

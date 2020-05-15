@@ -1,13 +1,15 @@
+// base
 @import "./base/reset";
 @import "./base/base";
 
+// component
 @import "./components/nav";
 @import "./components/works";
 @import "./components/feature";
 @import "./components/about";
+@import "./components/skill";
+@import "./components/scroll";
 
-
+// layout
 @import "./layout/header";
 @import "./layout/section";
-
-@import "color";

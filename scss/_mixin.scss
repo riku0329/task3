@@ -19,8 +19,9 @@
   -ms-transform: translate(-50%, -50%);
 }
 
-@mixin responsive {
-  width: 94%;
+@mixin responsive-content {
+  width: 90%;
+  margin: 0 auto;
 }
 
 @mixin section-content {

@@ -1,0 +1,38 @@
+.skill_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 6rem 0;
+}
+
+.skill_card {
+  max-width: 480px;
+  width: 100%;
+  height: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-top: 2rem;
+  :hover {
+    opacity: 0.8;
+  }
+
+  @include tablet {
+    @include responsive-content;
+    margin-top: 2rem;
+  }
+
+  &-icon {
+    text-align: center;
+    padding: 3rem;
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  p {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+}
