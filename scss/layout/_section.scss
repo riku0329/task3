@@ -1,0 +1,28 @@
+@import "../color";
+
+.section_wrap {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8rem 0;
+
+  &-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      font-size: 3.8rem;
+      font-weight: bold;
+    }
+  }
+  &-title::before, &-title::after {
+    content: '';
+    border-top: 4px solid $primary-text;
+    width: 30px;
+    margin: 0 20px;
+  }
+
+  &-description {
+    text-align: center;
+  }
+}

@@ -1,0 +1,95 @@
+@import '../color';
+
+.works_wrap {
+  background: $base-color-1;
+}
+
+.works_content {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &::after {
+    content: '';
+    width: 30%;
+    display: block;
+    height: 0;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.works_list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  width: 30%;
+
+  @include tablet {
+    width: 90%;
+  }
+
+  &-name {
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+.works_image {
+  width: 300px;
+  height: 240px;
+  position: relative;
+  margin: 0 auto;
+
+  &-display {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 12.5px;
+
+    @include tablet {
+      @include abusolute-center;
+    }
+  }
+  &-banner {
+    height: 100%;
+  }
+}
+
+.works_btn {
+  width: 40rem;
+  margin: 7rem auto 0;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid $primary-text;
+  border-radius: 38px;
+  cursor: pointer;
+
+  &:hover{
+    background: $base-color-3;
+  }
+
+  &:hover a{
+    color: $secondary-text;
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-text;
+    font-size: 1.8rem;
+  }
+
+}

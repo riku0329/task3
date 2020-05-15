@@ -1,0 +1,36 @@
+@import '../color';
+
+.nav {
+  height: 7vh;
+  background: $base-color-2;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.nav_list {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-item a{
+    text-decoration: none;
+    color: $primary-text;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  &-item a::after {
+    content: "";
+    width: 0;
+    transition: all 0.5s ease;
+    border-bottom: 2px solid $base-color-3;
+    display: block;
+  }
+  &-item a:hover::after {
+    width: 100%;
+    border-bottom: 2px solid $base-color-3;
+  }
+}

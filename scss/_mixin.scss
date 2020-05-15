@@ -1,0 +1,31 @@
+@mixin phone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin abusolute-center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+@mixin responsive {
+  width: 94%;
+}
+
+@mixin section-content {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 8rem;
+}
