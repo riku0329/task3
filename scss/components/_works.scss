@@ -18,9 +18,7 @@
   }
 
   @include tablet {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
 }
 
@@ -59,6 +57,8 @@
     z-index: 1;
     top: 15px;
     right: 12.5px;
+    width: 274px;
+    height: 157px;
 
     @include tablet {
       @include abusolute-center;
@@ -74,7 +74,6 @@
   width: 40rem;
   margin: 7rem auto 0;
   padding: 2rem;
-  text-align: center;
   border: 2px solid $primary-text;
   border-radius: 38px;
   cursor: pointer;
@@ -91,6 +90,8 @@
     text-decoration: none;
     color: $primary-text;
     font-size: 1.8rem;
+    display: block;
+    text-align: center;
   }
 
 }

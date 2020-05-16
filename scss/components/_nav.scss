@@ -1,13 +1,13 @@
 @import '../color';
 
-.nav {
+.gnav {
   height: 7vh;
   background: $base-color-2;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
-.nav_list {
+.gnav_list {
   margin: 0 auto;
   width: 100%;
   max-width: 500px;
@@ -16,14 +16,14 @@
   justify-content: space-between;
   align-items: center;
 
-  &-item a{
+  &-item a {
     text-decoration: none;
     color: $primary-text;
     font-size: 1.6rem;
     font-weight: bold;
   }
   &-item a::after {
-    content: "";
+    content: '';
     width: 0;
     transition: all 0.5s ease;
     border-bottom: 2px solid $base-color-3;
@@ -32,5 +32,92 @@
   &-item a:hover::after {
     width: 100%;
     border-bottom: 2px solid $base-color-3;
+  }
+}
+
+// responsive gnav
+@include phone {
+  
+  .gnav_btn {
+    width: 60px;
+    height: 50px;
+    background-color: $base-color-5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    z-index: 100;
+
+    span {
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: $base-color-2;
+      margin: 0 auto;
+      margin-top: 15px;
+    }
+    span:before,
+    span:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: $base-color-2;
+      margin: 0 auto;
+    }
+
+    span:before {
+      margin-top: -7px;
+    }
+    span:after {
+      margin-top: 7px;
+    }
+
+    .close{
+      background: transparent;
+    }
+
+    .close::before, .close::after{
+      margin-top: 0;
+      transition: .3s ease-in;
+    }
+    .close::before{
+      transform: rotate(-45deg);
+    }
+    .close::after{
+      transform: rotate(-135deg);
+    }
+  }
+
+  .gnav {
+    height: 0;
+  }
+
+  .gnav_list {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    padding: 50px 0 0 30px;
+    line-height: 100px;
+    transform: translate(100%);
+    transition: 0.3s ease-in;
+
+    &-item a {
+      font-size: 5rem;
+      color: $secondary-text;
+      border-bottom: 2px solid $base-color-3;
+    }
+
+    &-item a::after {
+      display: none;
+    }
+  }
+
+  .gnav_show .gnav_list {
+    transform: translate(0);
   }
 }

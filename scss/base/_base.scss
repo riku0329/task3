@@ -1,4 +1,5 @@
 @import "../mixin";
+@import "../color";
 
 *,
 *::before,
@@ -35,4 +36,36 @@ iframe{
   max-width: 100%;
   margin: 0;
   vertical-align: bottom;
+}
+
+
+.text_center{
+  text-align: center;
+}
+
+.bg_color{
+  background: $base-color-1;
+}
+
+.sp {
+  display: none;
+}
+
+.pc {
+  display: block;
+}
+
+.mt{
+  margin-top: 3rem;
+}
+
+// responsive gnav
+@include phone {
+  .sp {
+    display: block;
+  }
+
+  .pc {
+    display: none;
+  }
 }

@@ -5,6 +5,9 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 8rem 0;
+  @include phone {
+    width: 90%;
+  }
 
   &-title {
     display: flex;
