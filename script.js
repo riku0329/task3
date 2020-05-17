@@ -2,6 +2,7 @@
 
 const gnavBtn = document.getElementById('gnav_btn');
 const toggle = document.getElementById('toggle');
+const gnav = document.getElementById('gnav');
 
 let navToggle = false;
 
@@ -15,6 +16,13 @@ gnavBtn.addEventListener('click', () => {
     toggle.classList.remove('close');
   }
 });
+
+gnav.addEventListener('click', () => {
+  document.body.classList.remove('gnav_show')
+})
+
+
+
 
 // works
 
@@ -84,3 +92,13 @@ function init() {
 }
 
 init();
+
+
+
+// scroll
+
+const scrollTop = document.getElementById('scroll_top');
+
+scrollTop.addEventListener('click', () => {
+  scrollTo(0, 0)
+})
