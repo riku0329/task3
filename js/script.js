@@ -18,11 +18,8 @@ gnavBtn.addEventListener('click', () => {
 });
 
 gnav.addEventListener('click', () => {
-  document.body.classList.remove('gnav_show')
-})
-
-
-
+  document.body.classList.remove('gnav_show');
+});
 
 // works
 
@@ -64,7 +61,6 @@ const works = [
     h3: 'チャットアプリ',
     p: 'フレームワーク / React',
   },
-
 ];
 
 function init() {
@@ -93,12 +89,48 @@ function init() {
 
 init();
 
+// nice scroll
+$(function () {
+  $('body').niceScroll({
+    cursorcolor: '#222',
+    cursoropacitymin: 1,
+    cursoropacitymax: 1,
+    cursorwidth: '10px',
+    cursorborder: 'none',
+    mousescrollstep: 20,
+    background: '#a0a0a0',
+    smoothscroll: true,
+    sensitiverail: true,
+  });
+});
+
+// スムーズスクロール
+var scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 1000,
+});
 
 
-// scroll
 
-const scrollTop = document.getElementById('scroll_top');
+// swiper
+const swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  loop: true,
+});
 
-scrollTop.addEventListener('click', () => {
-  scrollTo(0, 0)
-})
+
+
+// swipe trigger
+const trigger = new ScrollTrigger.default();
+trigger.add('[data-trigger]', {
+  once: true,
+  offset: {
+    viewport: {
+      y: (trigger, frame, direction) => {
+        return trigger.visible ? 0 : 0.3;
+      },
+    },
+  },
+});

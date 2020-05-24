@@ -1,4 +1,4 @@
-@import '../color';
+@import '../variable/color';
 
 .gnav {
   height: 7vh;
@@ -37,7 +37,7 @@
 
 // responsive gnav
 @include phone {
-  
+
   .gnav_btn {
     width: 60px;
     height: 50px;

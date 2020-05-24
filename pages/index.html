@@ -16,15 +16,23 @@
     <title>PortFolio</title>
   </head>
   <body>
-    <header class="header">
+    <!-- header -->
+    <header class="header" id="header">
       <div class="header_wrap">
-        <h1 class="header_wrap-title"><span>Riku's</span>Portfolio</h1>
-        <h2 class="header_wrap-subtitle">フロントエンド開発見習いの実績</h2>
+        <h1 class="header_wrap-title moveInLeft">
+          <span>Riku's</span>Portfolio
+        </h1>
+        <h2 class="header_wrap-subtitle moveInLeft">
+          フロントエンド開発見習いの実績
+        </h2>
       </div>
       <div class="header_wrap-logo">
         <img src="../img/185.png" alt="logo" />
       </div>
     </header>
+    <!-- end header -->
+
+    <!-- nav -->
     <div class="gnav_btn" id="gnav_btn">
       <span id="toggle"></span>
     </div>
@@ -42,8 +50,10 @@
         </li>
       </ul>
     </nav>
+    <!-- end nav -->
 
-    <section class="works" id="works">
+    <!-- works section -->
+    <section class="works invisible" data-trigger id="works">
       <div class="section_wrap">
         <div class="section_wrap-title">
           <h2>WORKS</h2>
@@ -118,11 +128,9 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
-
         <div class="works_wrap" id="works_map">
           <!-- js -->
         </div>
-
         <p class="works_btn">
           <a href="https://focused-banach-c646cd.netlify.app/" target="blank"
             >実績をもっとみる</a
@@ -130,7 +138,10 @@
         </p>
       </div>
     </section>
-    <section class="feature" id="feature">
+    <!-- end works section -->
+
+    <!-- feature section -->
+    <section class="feature invisible" data-trigger id="feature">
       <div class="section_wrap">
         <div class="section_wrap-title">
           <h2>FEATURE</h2>
@@ -170,7 +181,10 @@
         </div>
       </div>
     </section>
-    <section class="about about_color" id="about">
+    <!-- end feature section -->
+
+    <!-- about section -->
+    <section class="about about_color invisible" data-trigger id="about">
       <div class="section_wrap about_border">
         <div class="section_wrap-title">
           <h2>ABOUT</h2>
@@ -208,7 +222,10 @@
         </div>
       </div>
     </section>
-    <section class="skill" id="skill">
+    <!-- end about section -->
+
+    <!-- skill section -->
+    <section class="skill invisible" data-trigger id="skill">
       <div class="section_wrap">
         <div class="section_wrap-title">
           <h2>SKILL</h2>
@@ -256,8 +273,10 @@
         </div>
       </div>
     </section>
+    <!-- end skill section -->
+
     <div class="scroll_btn">
-      <p id="scroll_top">Page Top</p>
+      <a href="#header">Page Top</a>
     </div>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104994.94956658309!2d135.41602428602425!3d34.677623069718955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6553406e2e1%3A0xc55bc16ee46a2fe7!2z5aSn6Ziq5bqc5aSn6Ziq5biC!5e0!3m2!1sja!2sjp!4v1589549791956!5m2!1sja!2sjp"
@@ -269,19 +288,19 @@
       aria-hidden="false"
       tabindex="0"
     ></iframe>
+
+    <!-- footer section -->
     <footer class="footer">
       <p>Copyright©CC. All Rights Reserved.</p>
     </footer>
-    <script src="../script.js"></script>
-    <script src="../swiper.min.js"></script>
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        loop: true,
-      });
-    </script>
+    <!-- end footer section -->
+
+    <!-- js -->
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/jquery.nicescroll.min.js"></script>
+    <script src="../js/smooth-scroll.polyfills.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/ScrollTrigger.min.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

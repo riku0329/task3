@@ -1,13 +1,13 @@
-@import "../color";
+@import '../variable/color';
 
-.footer{
+.footer {
   height: 40px;
   width: 100%;
   background: $base-color-5;
   display: flex;
   justify-content: center;
   align-items: center;
-  p{
+  p {
     font-size: 1.4rem;
     color: $secondary-text;
     text-align: center;

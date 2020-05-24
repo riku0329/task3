@@ -1,5 +1,5 @@
-@import "../mixin";
-@import "../color";
+@import '../variable/mixin';
+@import '../variable/color';
 
 *,
 *::before,
@@ -13,7 +13,7 @@ html {
     font-size: 50%;
   }
 
-  @include phone{
+  @include phone {
     font-size: 50%;
   }
 }
@@ -32,18 +32,17 @@ img {
   height: auto;
   vertical-align: middle;
 }
-iframe{
+iframe {
   max-width: 100%;
   margin: 0;
   vertical-align: bottom;
 }
 
-
-.text_center{
+.text_center {
   text-align: center;
 }
 
-.bg_color{
+.bg_color {
   background: $base-color-1;
 }
 
@@ -55,8 +54,38 @@ iframe{
   display: block;
 }
 
-.mt{
+.mt {
   margin-top: 3rem;
+}
+
+// animation
+.moveInLeft {
+  animation-name: moveInTop;
+  animation-duration: 2s;
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* アニメーション */
+.visible,
+.invisible {
+  transition: all 1.5s ease;
+  opacity: 0;
+  transform: translateY(200px);
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 // responsive gnav
